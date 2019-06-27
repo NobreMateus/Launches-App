@@ -4,3 +4,10 @@ export function aumenta(id){
         id
     }
 } 
+
+export function selectLaunch(launch){
+    return{
+        type: "SELECT_LAUNCH",
+        launch
+    }
+}

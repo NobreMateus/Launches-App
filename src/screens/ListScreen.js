@@ -11,11 +11,12 @@ export default class ListScreen extends Component {
         <View style={styles.container}> 
             <Provider store={store}>
                 <SearchField  />
-                <LaunchesList/>
+                <LaunchesList navigation= {this.props.navigation}/>
             </Provider> 
         </View>
         )
     }
+
 }
 
 const styles = StyleSheet.create({

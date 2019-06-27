@@ -43,6 +43,9 @@ const AppNavigator = createStackNavigator({
     }
   
   },
+  Teste: {
+    screen: ListItem
+  }
 }, {
     initialRouteName: 'Home',
 }, );

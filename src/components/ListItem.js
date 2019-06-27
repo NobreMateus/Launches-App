@@ -1,12 +1,18 @@
 import React, { Component } from 'React';
 import { View, StyleSheet, Text, FlatList, Dimensions, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { connect } from 'react-redux';
+import { selectLaunch } from "../actions/index";
 
-export default class ListItem extends Component {
+export class ListItem extends Component {
 
     render(){
         return(
             <TouchableOpacity style = {styles.item}
+                onPress={()=> {
+                    this.props.selectLaunch(this.props.info.mission_name)
+                    this.props.navigation.navigate('Details')
+                }}
             >
                 <View style = {styles.container}>
                     <Text style = { styles.textTitle } >{this.props.info.mission_name}</Text>
@@ -24,20 +30,19 @@ export default class ListItem extends Component {
     }
 }
 
+export default connect(
+    state => ({ launches: state }),
+    {selectLaunch}
+  )(ListItem);
+
 const styles = StyleSheet.create({
     container: {
         flex: 5,
         justifyContent: 'center', 
-        // flexDirection: 'row',
-        // borderWidth: 0.5,
-        // borderColor: '#1C1C1C',
-        // justifyContent: 'space-between'
     },
     container2: {
         flex: 1,
         justifyContent: 'center', 
-        // flexDirection: 'row',
-        // justifyContent: 'space-between'
     },
     textTitle: {
         color: 'white',
