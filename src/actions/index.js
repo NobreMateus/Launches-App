@@ -11,3 +11,10 @@ export function selectLaunch(launch){
         launch
     }
 }
+
+export function filterList(text){
+    return{
+        type: 'FILTER_LIST',
+        text
+    }
+}

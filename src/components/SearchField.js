@@ -1,6 +1,7 @@
 import React from 'React';
 import { Text, View, StyleSheet, Dimensions, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import { filterList } from '../actions/index';
 
 const SearchField = ({launches, dispatch}) => {
 
@@ -9,6 +10,7 @@ const SearchField = ({launches, dispatch}) => {
             <TextInput
                 style = {styles.textfield}
                 placeholder = "Procurar..."
+                onChange = {(t)=>dispatch(filterList(t.nativeEvent.text))}
             />
         </View>
     )

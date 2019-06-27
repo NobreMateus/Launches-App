@@ -92,10 +92,28 @@ export default function reducer(state = teste, action){
     // if(state){
     // }
    //console.log(state);
+   
     if(action.type == "SELECT_LAUNCH"){
         console.log(action);
         return {...state, selectedLaunch: action.launch }
     }
-    return state; 
+
+    if(action.type == "FILTER_LIST"){
+        
+        newLaunches = []
+        state = teste;
+
+        for (l of state.launches){
+            if(l.mission_name.toLowerCase().includes(action.text.toLowerCase()))
+                newLaunches.push(l)    
+        }
+
+        console.log(newLaunches);
+        return {
+            selectedLaunch: state.selectedLaunch,
+            launches: newLaunches
+        }
+    }
+    return state;
    
 }
