@@ -11,8 +11,8 @@ export default class ListScreen extends Component {
         <View style={styles.container}> 
             <Provider store={store}>
                 <SearchField  />
-                <LaunchesList />
-            </Provider>
+                <LaunchesList/>
+            </Provider> 
         </View>
         )
     }

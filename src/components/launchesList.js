@@ -11,7 +11,7 @@ const LaunchesList = ({launches, dispatch}) => {
     <View style={styles.container}>
         <FlatList
           data={launches}
-          renderItem={({item}) => <ListItem info={item} />}
+          renderItem={({item}) => <ListItem info={item}  />}
         />
     </View>
 )}

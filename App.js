@@ -5,6 +5,8 @@ import { createAppContainer, createStackNavigator, StackActions, NavigationActio
 import DetailsScreen from './src/screens/DetailsScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ListScreen from './src/screens/ListScreen';
+import ListItem from './src/components/ListItem';
+
 import store from './src/store';
 
 const AppNavigator = createStackNavigator({
