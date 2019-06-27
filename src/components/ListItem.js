@@ -7,8 +7,8 @@ export default class ListItem extends Component {
         return(
             <View style = {styles.item}>
                 <View style = {styles.container}>
-                    <Text style = { styles.text } >Teste {this.props.info.flight_number}</Text>
-                    <Text style = { styles.text }>Teste {this.props.info.mission_name}</Text>                
+                    <Text style = { styles.textTitle } >{this.props.info.mission_name}</Text>
+                    <Text style = { styles.infoText }>{this.props.info.rockets.rocket_name} - {this.props.info.launch_date_local}</Text>                
                 </View>
             </View>
         )
@@ -24,9 +24,16 @@ const styles = StyleSheet.create({
         // borderColor: '#1C1C1C',
         // justifyContent: 'space-between'
     },
-    text: {
+    textTitle: {
         color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold'
     },
+    infoText:{
+        color: 'white',
+        fontSize: 16,
+    },
+
     item: {
         padding: 10,
         borderBottomWidth: 1,

@@ -8,6 +8,7 @@ const SearchField = ({launches, dispatch}) => {
         <View>
             <TextInput
                 style = {styles.textfield}
+                placeholder = "Procurar..."
             />
         </View>
     )
@@ -16,9 +17,11 @@ const SearchField = ({launches, dispatch}) => {
 const styles = StyleSheet.create({
     textfield:{
         width: Dimensions.get('window').width,
-        borderColor: 'gray', 
-        borderWidth: 1,
-        height: 22
+        borderBottomColor: 'gray', 
+        borderBottomWidth: 1,
+        fontSize: 20,
+        padding: 12,
+        color: 'white'
     }
 })
 

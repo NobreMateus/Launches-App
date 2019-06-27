@@ -21,6 +21,5 @@ export default connect(state => ({ launches: state })) (LaunchesList);
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        paddingTop: 22
     }
 })

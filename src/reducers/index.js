@@ -3,54 +3,85 @@ import * as Launches from '../services/Launches';
 teste = [
     {
         key: '1',
-        flight_number: 1,
-        mission_name: "FalconSat"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '2',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 2",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 2"
+        }
     },
     {
         key: '3',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 3",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 3"
+        }
     },
     {
         key: '4',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 4",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '5',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '6',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '7',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '8',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '9',
-        flight_number: 2,
-        mission_name: "Outra Missao"
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
     },
     {
         key: '10',
-        flight_number: 2,
-        mission_name: "Outra Missao"
-    }
+        mission_name: "Missao 1",
+        launch_date_local: "01/03/1997",
+        rockets: {
+            rocket_name: "Foguete 1"
+        }
+    },
+    
 ] 
 
 export default function reducer(state = teste, action){
