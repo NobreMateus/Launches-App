@@ -7,12 +7,11 @@ import store from '../store/index';
 
 export class DetailsInfo extends Component {
     render(){
-        console.log(this.props.selectedLaunch)
-    return(
+     return(
         //actions.selectLaunch.links.article_link
         <ScrollView  style={styles.container}> 
             {/* <VideoPlayerDetails /> */}
-            <Text style={styles.titleText}>Nome da Missão: </Text>
+            <Text style={styles.titleText}>Nome da Missão: </Text> 
             <Text style={styles.text}>{this.props.selectedLaunch.mission_name}</Text>
             <Text style={styles.titleText}>Detalhes da Missão:</Text>
             <Text style={styles.text}>{this.props.selectedLaunch.details}</Text> 
