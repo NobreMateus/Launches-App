@@ -8,10 +8,10 @@ A Interface Gráfica do aplicativo foi pensanda para seguir a identidade visual 
 
 O aplicativo é bem simples e consiste basicamente em 4 telas diferentes: Uma tela de home, uma tela de pesquisa e listagem dos lançamentos com algumas informações básicas, uma tela para visualizar informações mais detalhadas e mais uma tela para mostrar o artigo referente àquele lançamento. Abaixo print de todas as telas. 
 
-![](/assets/prints/home.jpeg)
-![](/assets/prints/list.jpeg)
-![](/assets/prints/details.jpeg)
-![](/assets/prints/article.jpeg)
+![](/assets/prints/home.jpeg){:height="50%" width="50%"}
+![](/assets/prints/list.jpeg){:height="50%" width="50%"}
+![](/assets/prints/details.jpeg){:height="50%" width="50%"}
+![](/assets/prints/article.jpeg){:height="50%" width="50%"}
 
 ## Instalação
 
