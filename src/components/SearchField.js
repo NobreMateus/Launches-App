@@ -10,7 +10,7 @@ const SearchField = ({launches, dispatch}) => {
             <TextInput
                 style = {styles.textfield}
                 placeholder = "Procurar..."
-                onChange = {(t)=>dispatch(filterList(t.nativeEvent.text))}
+                onChange = {(t)=>dispatch(filterList(t.nativeEvent.text))} 
             />
         </View>
     )

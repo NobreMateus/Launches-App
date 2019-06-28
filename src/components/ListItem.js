@@ -10,13 +10,15 @@ export class ListItem extends Component {
         return(
             <TouchableOpacity style = {styles.item}
                 onPress={()=> {
+                    console.log(this.props.info);  
                     this.props.selectLaunch(this.props.info.mission_name)
                     this.props.navigation.navigate('Details')
                 }}
             >
                 <View style = {styles.container}>
+                    {/* <Text style = { styles.textTitle }>Rodou Parece!</Text> */}
                     <Text style = { styles.textTitle } >{this.props.info.mission_name}</Text>
-                    <Text style = { styles.infoText }>{this.props.info.rockets.rocket_name} - {this.props.info.launch_date_local}</Text>                
+                    <Text style = { styles.infoText }>{this.props.info.rocket.rocket_name} - {this.props.info.launch_date_local.split('T')[0]}</Text>                
                 </View>
                 <View style = {styles.container2}>   
                     <Icon  

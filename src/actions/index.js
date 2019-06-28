@@ -18,3 +18,11 @@ export function filterList(text){
         text
     }
 }
+
+export function updateLaunches(launches){
+
+    return{
+        type: 'UPDATE_LAUNCHES',
+        launches
+    }
+}

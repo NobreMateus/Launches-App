@@ -5,7 +5,11 @@ import store from '../store/index';
 import LaunchesList from '../components/launchesList';
 import SearchField from '../components/SearchField';
 
+
 export default class ListScreen extends Component {
+    
+    
+    
     render(){
         return(
         <View style={styles.container}> 
@@ -16,8 +20,9 @@ export default class ListScreen extends Component {
         </View>
         )
     }
-
 }
+
+ 
 
 const styles = StyleSheet.create({
     container: {
