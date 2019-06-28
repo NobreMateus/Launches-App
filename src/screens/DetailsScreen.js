@@ -8,9 +8,8 @@ export default class DetailisScreen extends Component {
     render(){
         return(
         <View style={styles.container}> 
-            <Text> Detalhes de Lançamento </Text>
             <Provider store={store}>
-                <DetailsInfo />
+                <DetailsInfo navigation ={this.props.navigation} />
             </Provider>      
         </View>
         )
@@ -20,7 +19,7 @@ export default class DetailisScreen extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
     },

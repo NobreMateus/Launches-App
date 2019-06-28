@@ -11,7 +11,6 @@ export class LaunchesList extends Component {
 
     componentWillMount(){
         Launches.getAllLaunches().then((l)=>{
-            console.log(l.data)
             this.props.updateLaunches(l.data);
         })
     }

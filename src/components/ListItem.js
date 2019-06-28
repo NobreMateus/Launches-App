@@ -10,7 +10,6 @@ export class ListItem extends Component {
         return(
             <TouchableOpacity style = {styles.item}
                 onPress={()=> {
-                    console.log(this.props.info);  
                     this.props.selectLaunch(this.props.info)
                     this.props.navigation.navigate('Details')
                 }}

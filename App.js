@@ -34,7 +34,7 @@ const AppNavigator = createStackNavigator({
   Details: {
     screen: DetailsScreen,
     navigationOptions:{
-      headerTitle: "Detalhes",
+      headerTitle: "Detalhes do Lançamento",
       headerStyle: {
         backgroundColor: '#1C1C1C',
       },

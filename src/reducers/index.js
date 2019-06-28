@@ -34,7 +34,6 @@ export default function reducer(state = teste, action){
    }
    
     if(action.type == "SELECT_LAUNCH"){
-        console.log(action);
         return {...state, selectedLaunch: action.launch }
     }
 

@@ -5,19 +5,15 @@ import DetailsInfo from '../components/DetailsInfo';
 import store from '../store/index';
 import { connect } from 'react-redux';
 
-export class ArticleView extends Component {
+export default class ArticleView extends Component {
     render(){
-
-        console.log(this.props.launches.links.article_link)
 
         return(
             
         <WebView 
-            source={{uri: this.props.launches.links.article_link}}
-            style={{marginTop: 20}}
+            source={{uri: this.props.navigation.getParam('uri')}}
         />  
         )
     }
 }
 
-export default connect(state => ({ launches: state.selectedLaunch }))(ArticleView)
