@@ -5,7 +5,8 @@ import { createAppContainer, createStackNavigator, StackActions, NavigationActio
 import DetailsScreen from './src/screens/DetailsScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ListScreen from './src/screens/ListScreen';
-import ListItem from './src/components/ListItem';
+import ArticleView from './src/screens/ArticleView'
+
 
 import store from './src/store';
 
@@ -43,8 +44,19 @@ const AppNavigator = createStackNavigator({
     }
   
   },
-  Teste: {
-    screen: ListItem
+
+  ArticleView: {
+    screen: ArticleView,
+    navigationOptions:{
+      headerTitle: "Artigo",
+      headerStyle: {
+        backgroundColor: '#1C1C1C',
+      },
+      headerTitleStyle: {
+        color: 'white'
+      },
+    }
+  
   }
 }, {
     initialRouteName: 'Home',

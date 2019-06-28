@@ -19,8 +19,12 @@ export class LaunchesList extends Component {
     render(){
         return(
             <View style={styles.container}>
+                {this.props.ready?null:<Text style={{color:'white'}}>Carregando...</Text>}
                 <FlatList
-                  data={this.props.launches}
+                  data={this.props.launches.slice(
+                      this.props.page * this.props.qItemsPage, 
+                      (this.props.page * this.props.qItemsPage) + this.props.qItemsPage 
+                )} 
                   renderItem={({item}) => <ListItem info={item} navigation={this.props.navigation}  />}
                 />
             </View>
@@ -28,7 +32,7 @@ export class LaunchesList extends Component {
     }
 }
 
-export default connect(state => ({ launches: state.launches }), {updateLaunches}) (LaunchesList);
+export default connect(state => ({ launches: state.filteredLaunches, page: state.page, qItemsPage: state.qItemsPage, ready: state.ready }), {updateLaunches}) (LaunchesList);
 
 const styles = StyleSheet.create({
     container:{

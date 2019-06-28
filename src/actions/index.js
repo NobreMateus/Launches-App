@@ -26,3 +26,11 @@ export function updateLaunches(launches){
         launches
     }
 }
+
+export function changePage(direction){
+
+    return{
+        type: 'CHANGE_PAGE',
+        direction
+    }
+}

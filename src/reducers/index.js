@@ -2,9 +2,14 @@ import * as Launches from '../services/Launches';
 
 teste = {
     selectedLaunch: "Missao 1",    
-    launches: []
-
+    launches: [],
+    filteredLaunches: [],
+    page:0,
+    qItemsPage: 10,
+    ready: false
 } 
+
+const pageItems = 10;
 
 export default function reducer(state = teste, action){
     //state = Launches.getAllLaunches();
@@ -21,8 +26,10 @@ export default function reducer(state = teste, action){
         }
 
         return {
-            selectedLaunch : state.selectedLaunch,
-            launches: action.launches
+            ...state,
+            launches: action.launches,
+            filteredLaunches: action.launches,
+            ready: true
         }
    }
    
@@ -34,19 +41,26 @@ export default function reducer(state = teste, action){
     if(action.type == "FILTER_LIST"){
         
         newLaunches = []
-        state = teste;
-
+        
         for (l of state.launches){
             if(l.mission_name.toLowerCase().includes(action.text.toLowerCase()))
                 newLaunches.push(l)    
         }
 
-        console.log(newLaunches);
         return {
-            selectedLaunch: state.selectedLaunch,
-            launches: newLaunches
+            ...state,
+            filteredLaunches: newLaunches,
+            page: 0
         }
     }
+
+    if(action.type == "CHANGE_PAGE"){
+        if(action.direction == 'next' && state.page < Math.ceil(state.filteredLaunches.length / state.qItemsPage) - 1 )
+            return{...state,  page: state.page + 1 }
+        else if(action.direction == 'prev' && state.page > 0 ) 
+            return{...state,  page: state.page - 1 } 
+    }
+
     return state;
    
 }

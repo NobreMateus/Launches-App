@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../store/index';
 import LaunchesList from '../components/launchesList';
 import SearchField from '../components/SearchField';
-
+import PageButtons from '../components/PageButtons'
 
 export default class ListScreen extends Component {
     
@@ -16,6 +16,7 @@ export default class ListScreen extends Component {
             <Provider store={store}>
                 <SearchField  />
                 <LaunchesList navigation= {this.props.navigation}/>
+                <PageButtons /> 
             </Provider> 
         </View>
         )
